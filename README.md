@@ -1,66 +1,71 @@
-**Smart Contract Agreement System**
+# Smart Contract Agreement System
 
+## Overview
 
-\## Overview
+The Smart Contract Agreement System is a blockchain-based application developed using Solidity. It allows two parties to participate in a digital agreement, confirm the agreed terms, and complete the agreement through smart contract transactions.
 
+The project demonstrates how blockchain technology can help manage agreements transparently and enforce predefined rules without relying on a centralized application.
 
-This project implements a simple agreement management system using Solidity smart contracts. It allows two parties to confirm an agreement and mark it as completed on the blockchain.
+## Features
 
-\## Features
+- Stores the wallet addresses of both parties.
+- Records agreement details and the agreed amount.
+- Allows both parties to confirm the agreement.
+- Completes the agreement only after both parties have confirmed.
+- Restricts confirmation and completion actions to authorized parties.
+- Maintains agreement status through blockchain transactions.
+- Uses smart contract conditions to prevent invalid operations.
 
-\* Stores the addresses of both parties.
+## Technologies Used
 
-\* Stores agreement details and the agreed amount.
+- Solidity
+- Ethereum Virtual Machine (EVM)
+- Remix IDE
+- Remix VM (Osaka)
 
-\* Allows both parties to confirm the agreement.
+## Smart Contract Functions
 
-\* Completes the agreement only after both parties confirm.
+- `confirmAgreement()` — Allows an authorized party to confirm the agreement.
+- `completeAgreement()` — Completes the agreement after both parties have confirmed.
+- `isActive` — Indicates whether the agreement is still active.
 
-\* Prevents unauthorized users from confirming or completing the agreement.
+## Testing
 
-\* Uses blockchain transactions to maintain the agreement status.
+The smart contract was compiled, deployed, and tested successfully using Remix VM.
 
-\## Technologies Used
+The following operations were verified:
 
-\* Solidity
+1. Deployed the contract with two different party addresses.
+2. Confirmed the agreement using both parties.
+3. Completed the agreement after both confirmations.
+4. Verified that `isActive` became `false` after completion.
 
-\* Ethereum Virtual Machine (EVM)
+## How to Run
 
-\* Remix IDE
+1. Open [Remix IDE](https://remix.ethereum.org/).
+2. Create a Solidity file named `Agreement.sol`.
+3. Paste the smart contract source code into the file.
+4. Compile the contract using a compatible Solidity compiler.
+5. Select Remix VM under **Deploy & Run Transactions**.
+6. Deploy the contract using the required constructor parameters, including Party B's address, agreement details, and amount.
+7. Switch between the two authorized party accounts to test agreement confirmation.
+8. Call `completeAgreement()` after both parties have confirmed.
+9. Verify that the agreement is no longer active.
 
-\* Remix VM (Osaka)
+**Note:** The constructor parameters must match the actual `Agreement.sol` source code in this repository.
 
-\## Smart Contract Functions
+## Learning Outcomes
 
-\* `confirmAgreement()` – Allows either party to confirm the agreement.
+- Understanding Solidity smart contract development.
+- Learning how blockchain transactions modify contract state.
+- Implementing access control and authorization.
+- Working with multiple Ethereum accounts in Remix.
+- Testing smart contract functions in a simulated blockchain environment.
 
-\* `completeAgreement()` – Marks the agreement as inactive after both parties confirm.
+## Author
 
-\## Testing
+**Srisha Reddie**
 
-The contract was deployed and tested successfully in Remix VM. Both parties confirmed the agreement, and `isActive` became `false` after completion.
+## Disclaimer
 
-\## How to Run
-
-1\. Open https://app.remix.live/
-
-2\. Create a file named `Agreement.sol`.
-
-3\. Paste the Solidity smart contract code.
-
-4\. Compile using a compatible Solidity compiler.
-
-5\. Select Remix VM as the deployment environment.
-
-6\. Deploy the contract with Party B's address, agreement details, and amount.
-
-7\. Test the confirmation and completion functions using the two party accounts.
-
-\## Author
-
-
-
-Srisha Reddie
-
-
-
+This project is intended for educational purposes. It demonstrates a simplified agreement workflow and is not a substitute for legal advice or a professionally audited agreement system.
