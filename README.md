@@ -1,18 +1,12 @@
-\# Smart Contract Agreement System
-
+**Smart Contract Agreement System**
 
 
 \## Overview
 
 
-
 This project implements a simple agreement management system using Solidity smart contracts. It allows two parties to confirm an agreement and mark it as completed on the blockchain.
 
-
-
 \## Features
-
-
 
 \* Stores the addresses of both parties.
 
@@ -26,11 +20,7 @@ This project implements a simple agreement management system using Solidity smar
 
 \* Uses blockchain transactions to maintain the agreement status.
 
-
-
 \## Technologies Used
-
-
 
 \* Solidity
 
@@ -40,29 +30,17 @@ This project implements a simple agreement management system using Solidity smar
 
 \* Remix VM (Osaka)
 
-
-
 \## Smart Contract Functions
-
-
 
 \* `confirmAgreement()` – Allows either party to confirm the agreement.
 
 \* `completeAgreement()` – Marks the agreement as inactive after both parties confirm.
 
-
-
 \## Testing
-
-
 
 The contract was deployed and tested successfully in Remix VM. Both parties confirmed the agreement, and `isActive` became `false` after completion.
 
-
-
 \## How to Run
-
-
 
 1\. Open https://app.remix.live/
 
@@ -77,8 +55,6 @@ The contract was deployed and tested successfully in Remix VM. Both parties conf
 6\. Deploy the contract with Party B's address, agreement details, and amount.
 
 7\. Test the confirmation and completion functions using the two party accounts.
-
-
 
 \## Author
 
